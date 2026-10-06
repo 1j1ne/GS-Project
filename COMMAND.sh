@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 COMMAND=$1
 
@@ -10,6 +10,9 @@ elif [[ "$COMMAND" = "status" ]]; then
 
 elif [[ "$COMMAND" = "end" ]]; then
     python3 ./command.py "end"
+
+elif [[ "$COMMAND" = "help" ]]; then
+    cat ./README.md
 
 else
     echo "Wrong Command"
