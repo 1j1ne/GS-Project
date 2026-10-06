@@ -7,14 +7,7 @@ with open("position.json", "r") as info:
 
 
 if sys.argv[1] == "move":
-    path = pathfinding.calculate_path(data["x_position"], data["y_position"], sys.argv[2], sys.argv[3])
-    data["x_position"] = sys.argv[2]
-    data["y_position"] = sys.argv[3]
-    
-    with open("position.json", "w") as info:
-        json.dump(data, info)
-
-    print(path)
+    pathfinding.calculate_path(data["x_position"], data["y_position"], sys.argv[2], sys.argv[3])
 
 if sys.argv[1] == "status":
     print(data)
